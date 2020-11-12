@@ -240,20 +240,9 @@
                                 <i class="header-icon lnr-rocket icon-gradient bg-tempting-azure"> </i>
                                 监控面板
                             </div>
-<!--                            <div class="btn-actions-pane-right">-->
-<!--                                <button class="btn-wide btn btn-link btn-sm">View All</button>-->
-<!--                                <button class="btn-wide btn-shadow btn btn-primary btn-sm">Add New Entry</button>-->
-<!--                            </div>-->
                         </div>
                         <div class="widget-chart p-0">
                             <MixedExample></MixedExample>
-<!--                            <div class="widget-chart-content">-->
-<!--                                <div class="widget-description mt-0 text-warning">-->
-<!--                                    <font-awesome-icon icon="arrow-left"/>-->
-<!--                                    <span class="pl-1">175.5%</span>-->
-<!--                                    <span class="text-muted opacity-8 pl-1">increased server resources</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
                         </div>
                         <div class="pt-2 card-body">
                             <div class="row">
@@ -345,9 +334,9 @@
 </template>
 
 <script>
-    import Sparkline from 'vue-sparklines'
-    import VueCircle from 'vue2-circle-progress'
     import {library} from '@fortawesome/fontawesome-svg-core'
+    import MixedExample from '../chart/MixedExample'
+
     import {
         faCalendarAlt,
         faAngleDown,
@@ -377,6 +366,7 @@
 
     export default {
         components: {
+            MixedExample,
         },
         data: () => ({
 
@@ -386,6 +376,7 @@
             modalShow: false,
             dialogVisible: false,
             dialog: false,
+            desc: '',
 
             dialogTableVisible: false,
             dialogFormVisible: false,

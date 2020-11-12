@@ -66,33 +66,34 @@
                 </div>
             </div>
 
-            <el-dialog title="添加项目" :visible.sync="dialogFormVisible">
-                <el-form :model="form">
-                    <el-form-item label="项目名称" :label-width="formLabelWidth">
-                        <el-input v-model="form.name" autocomplete="off"></el-input>
-                    </el-form-item>
-                    <el-form-item label="项目描述" :label-width="formLabelWidth">
-                        <el-input v-model="form.desc" autocomplete="off"></el-input>
-                    </el-form-item>
-                    <el-form-item label="项目文件" :label-width="formLabelWidth">
-                        <el-upload
-                            class="upload-demo"
-                            drag
-                            action="https://jsonplaceholder.typicode.com/posts/"
-                            multiple>
-                            <i class="el-icon-upload"></i>
-                            <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-                            <div class="el-upload__tip" slot="tip">只能上传.zip文件</div>
-                        </el-upload>
-                    </el-form-item>
-                </el-form>
-                <div slot="footer" class="dialog-footer">
-                    <el-button @click="dialogFormVisible = false">取 消</el-button>
-                    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-                </div>
-            </el-dialog>
 
         </div>
+        <el-dialog title="添加项目" :visible.sync="dialogFormVisible">
+            <el-form :model="form">
+                <el-form-item label="项目名称" :label-width="formLabelWidth">
+                    <el-input v-model="form.name" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="项目描述" :label-width="formLabelWidth">
+                    <el-input v-model="form.desc" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="项目文件" :label-width="formLabelWidth">
+                    <el-upload
+                        class="upload-demo"
+                        drag
+                        action="https://jsonplaceholder.typicode.com/posts/"
+                        multiple>
+                        <i class="el-icon-upload"></i>
+                        <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+                        <div class="el-upload__tip" slot="tip">只能上传.zip文件</div>
+                    </el-upload>
+                </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+                <el-button @click="dialogFormVisible = false">取 消</el-button>
+                <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+            </div>
+        </el-dialog>
+
     </div>
 </template>
 
@@ -115,7 +116,7 @@ export default {
             resource: '',
             desc: ''
         },
-        formLabelWidth: '120px',
+        formLabelWidth: '100px',
 
 
     }),
